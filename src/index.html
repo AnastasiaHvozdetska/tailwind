@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + TS</title>
   </head>
-  <body class="text-main">
-    <section class="relative min-h-screen container mx-auto pb-[200px]">
+  <body class="text-main overflow-x-hidden">
+    <section class="relative container mx-auto pb-28">
       <header class="flex justify-between pt-8 pr-5 pl-5">
         <img src="./assets/icons/logo.svg" alt="" />
 
@@ -41,7 +41,7 @@
         </button>
       </header>
 
-      <div class="flex">
+      <div class="flex justify-between gap-5">
         <div class="w-[540px]">
           <h1
             class="mt-190px text-8xl bg-gradient-to-r from-purple to-orange text-transparent bg-clip-text leading-[88px]"
@@ -71,52 +71,98 @@
           </div>
         </div>
 
-        <div class="flex-1 relative mt-24">
-          <div
-            class="absolute left-[152px] w-48 h-56 bg-white rounded-[10px] shadow-3xl p-8 pb-[35px] flex flex-col justify-center items-center"
-          >
-            <h5 class="text-lg2 text-center font-normal mb-11">
-              Amanda M. Data
-            </h5>
-
-            <p class="font-gilroy text-sm leading-normal">Your Growth</p>
-            <span
-              class="font-interBold text-3xl bg-gradient-to-r from-purple to-orange text-transparent bg-clip-text"
-              >3,000</span
-            >
-
+        <div
+          class="flex flex-1 relative mt-24 gap-14 2xl:flex-initial 2xl:w-[800px] max-w-700"
+        >
+          <div class="flex flex-col gap-9 items-end">
             <div
-              class="absolute w-12 h-12 bg-origin-border border-solid border-[3px] rounded-full border-transparent gradient-button -top-5 -right-6 overflow-hidden"
+              class="w-48 h-56 bg-white rounded-10 shadow-2xl p-8 pb-[35px] flex flex-col justify-center items-center relative -right-7"
             >
-              <img class="rounded-full" src="./assets/icons/man.png" alt="" />
-            </div>
-          </div>
-          <div
-            class="absolute w-80 h-72 bg-white rounded-lg right-12 top-20 shadow-3xl pt-6 pl-[33px] pr-[25px]"
-          >
-            <div class="flex items-center justify-between">
-              <span class="text-sm">Media Type</span>
+              <h5 class="text-lg2 text-center font-normal mb-11">
+                Amanda M. Data
+              </h5>
 
-              {{> buttons }}
-            </div>
-
-            <div class="relative">
-              {{> circle }}
-
-              <p
-                class="absolute left-2 text-white bg-dark font-gilroy top-[75px] p-3 rounded-lg text-sm w-[170px] after:content-[''] after:border-x-[7.5px] after:border-t-[10px] after:border-b-0 after:border-t-dark after:border-x-transparent after:border-b-transparent after:border-solid after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2"
+              <p class="font-gilroy text-sm leading-normal">Your Growth</p>
+              <span
+                class="font-interBold text-3xl bg-gradient-to-r from-purple to-orange text-transparent bg-clip-text"
+                >3,000</span
               >
-                72.3% of the media for #sunrise are photos.
-              </p>
+
+              <div
+                class="absolute w-12 h-12 bg-origin-border border-solid border-[3px] rounded-full border-transparent gradient-button -top-5 -right-6 overflow-hidden"
+              >
+                <img class="rounded-full" src="./assets/icons/man.png" alt="" />
+              </div>
+            </div>
+            <div
+              class="w-80 bg-white rounded-lg shadow pt-6 pl-[33px] pr-[25px] pb-12"
+            >
+              <div class="flex items-center justify-between mb-1">
+                <span class="text-sm">Follower Growth</span>
+
+                {{> buttons }}
+              </div>
+              <span class="font-gilroy text-xs mt-4 leading-normal mb-5">
+                <span class="text-lg3 mr-0.5">16.2k</span> New Followers</span
+              >
+              <div class="mt-5 flex flex-col gap-11 relative">
+                <span
+                  class="font-inter text-xs border-b relative after:content-[''] after:absolute after:h-px after:bg-white after:w-5 after:-bottom-px after:left-0"
+                  >8k</span
+                >
+                <span
+                  class="font-inter text-xs border-b relative after:content-[''] after:absolute after:h-px after:bg-white after:w-5 after:-bottom-px after:left-0"
+                  >6k</span
+                >
+                <span
+                  class="font-inter text-xs border-b relative after:content-[''] after:absolute after:h-px after:bg-white after:w-5 after:-bottom-px after:left-0"
+                  >4k</span
+                >
+                <span
+                  class="font-inter text-xs border-b relative after:content-[''] after:absolute after:h-px after:bg-white after:w-5 after:-bottom-px after:left-0"
+                  >2k</span
+                >
+                <div class="absolute bottom-0 right-4">{{> graphics }}</div>
+              </div>
             </div>
           </div>
-          <div
-            class="absolute left-3 w-80 h-80 bg-white rounded-lg shadow -bottom-20 pt-6 pl-[33px] pr-[25px]"
-          >
-            <div class="flex items-center justify-between">
-              <span class="text-sm">Follower Growth</span>
+          <div class="right flex flex-col gap-3.5">
+            <div
+              class="w-80 h-72 bg-white rounded-lg mt-20 shadow-3xl pt-6 pl-[33px] pr-[25px]"
+            >
+              <div class="flex items-center justify-between">
+                <span class="text-sm">Media Type</span>
 
-              {{> buttons }}
+                {{> buttons }}
+              </div>
+
+              <div class="relative">
+                {{> circle }}
+
+                <p
+                  class="absolute left-2 text-white bg-dark font-gilroy top-[75px] p-3 rounded-lg text-sm w-[170px] after:content-[''] after:border-x-[7.5px] after:border-t-[10px] after:border-b-0 after:border-t-dark after:border-x-transparent after:border-b-transparent after:border-solid after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2"
+                >
+                  72.3% of the media for #sunrise are photos.
+                </p>
+              </div>
+            </div>
+            <div
+              class="shadow-2xl relative right-7 w-96 bg-white rounded-lg p-5 pr-6 flex gap-6"
+            >
+              <span
+                class="font-inter font-semibold text-[40px] bg-selago py-3 px-[18px] rounded-md leading-none"
+                >14k</span
+              >
+              <div class="flex flex-col flex-1">
+                <span class="text-sm pt-1">Follower Growth</span>
+
+                <div
+                  class="h-2 w-full rounded-xl mb-2 mt-4 bg-gradient-to-r from-purple to-orange"
+                ></div>
+                <div
+                  class="h-2 w-full rounded-xl w-2/3 bg-gradient-to-r from-purple to-orange"
+                ></div>
+              </div>
             </div>
           </div>
         </div>
@@ -169,6 +215,123 @@
         <span class="border-r border-linesColor"></span>
         <span class="border-r border-linesColor"></span><span></span>
       </div>
+    </section>
+
+    <div
+      class="div absolute w-[110%] h-[975px] -skew-x-12 -rotate-12 -z-10 top-[480px] -left-20 bg-titanWhite"
+    ></div>
+    <div
+      class="circle absolute w-[700px] h-[700px] bg-purpleHeart rounded-full skew-x-20 right-0 top-[900px] -translate-y-1/2 blur-[320px] -z-20"
+    ></div>
+
+    <section
+      class="flex gap-[103px] justify-center mt-7 pb-28 container mx-auto"
+    >
+      <img src="./assets/icons/partners/partner1.svg" alt="" />
+      <img src="./assets/icons/partners/partner2.svg" alt="" />
+      <img src="./assets/icons/partners/partner3.svg" alt="" />
+      <img src="./assets/icons/partners/partner4.svg" alt="" />
+      <img src="./assets/icons/partners/partner5.svg" alt="" />
+    </section>
+
+    <section class="mt-7 flex flex-col items-center container mx-auto pb-20">
+      <h2
+        class="mb-6 text-6xl bg-gradient-to-r from-purple to-orange text-transparent bg-clip-text font-GilroyBold"
+      >
+        What we Offer?
+      </h2>
+      <p class="text-xl max-w-700 text-center leading-30px">
+        in virtual space through communication platforms. Durable relations that
+        extend beyond immediate genealogical ties.
+      </p>
+      <div class="div grid gap-10 grid-cols-282 w-full mt-20 justify-center">
+        <div class="bg-white p-9 pr-7 pb-3.5 rounded-10 shadow">
+          <div
+            class="div w-[60px] h-[60px] rounded-full bg-lightTitanWhite flex items-center justify-center"
+          >
+            {{> services/service1 }}
+          </div>
+          <h4 class="text-xl leading-[18px] mt-10">Community Support</h4>
+          <p class="font-gilroyMedium text-base leading-22px mt-4">
+            Apps keep work and information right at your fingertips—and Slack
+            keeps it all securely.
+          </p>
+        </div>
+        <div class="bg-white p-9 pr-7 pb-3.5 rounded-10 shadow">
+          <div
+            class="div w-[60px] h-[60px] rounded-full bg-lightTitanWhite flex items-center justify-center"
+          >
+            {{> services/service2 }}
+          </div>
+          <h4 class="text-xl leading-[18px] mt-10">Security First</h4>
+          <p class="font-gilroyMedium text-base leading-22px mt-4">
+            Connect the tools you already use to get more from them every time
+            you work.
+          </p>
+        </div>
+        <div class="bg-white p-9 pr-7 pb-3.5 rounded-10 shadow">
+          <div
+            class="div w-[60px] h-[60px] rounded-full bg-lightTitanWhite flex items-center justify-center"
+          >
+            {{> services/service3 }}
+          </div>
+          <h4 class="text-xl leading-[18px] mt-10">24/7 Admin Support</h4>
+          <p class="font-gilroyMedium text-base leading-22px mt-4">
+            You can work with apps in channels, where they’re a seamless part of
+            the conver.
+          </p>
+        </div>
+        <div class="bg-white p-9 pr-7 pb-3.5 rounded-10 shadow">
+          <div
+            class="div w-[60px] h-[60px] rounded-full bg-lightTitanWhite flex items-center justify-center"
+          >
+            {{> services/service4 }}
+          </div>
+          <h4 class="text-xl leading-[18px] mt-10">100+ Themes</h4>
+          <p class="font-gilroyMedium text-base leading-22px mt-4">
+            Spend less time tracking down the people needed to get work done.
+          </p>
+        </div>
+        <div class="bg-white p-9 pr-7 pb-3.5 rounded-10 shadow">
+          <div
+            class="div w-[60px] h-[60px] rounded-full bg-lightTitanWhite flex items-center justify-center"
+          >
+            {{> services/service5 }}
+          </div>
+          <h4 class="text-xl leading-[18px] mt-10">Fully Integrated</h4>
+          <p class="font-gilroyMedium text-base leading-22px mt-4">
+            Skip the follow-ups and back-and -forth. Easily standardize how you
+            collect
+          </p>
+        </div>
+        <div class="bg-white p-9 pr-7 pb-3.5 rounded-10 shadow">
+          <div
+            class="div w-[60px] h-[60px] rounded-full bg-lightTitanWhite flex items-center justify-center"
+          >
+            {{> services/service6 }}
+          </div>
+          <h4 class="text-xl leading-[18px] mt-10">Monthly Update</h4>
+          <p class="font-gilroyMedium text-base leading-22px mt-4">
+            Take control of your work day. In a just a few minutes, create a
+            customized workflow
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="flex mt-7 container mx-auto gap-[120px] border">
+      <div class="div border">
+        <h2
+          class="mb-6 text-6xl bg-gradient-to-r from-purple to-orange text-transparent bg-clip-text font-GilroyBold"
+        >
+          How it Works?
+        </h2>
+        <p class="leading-30px font-inter">
+          Resolving neglected sir tolerably but existence conveying for. Day his
+          put off unaffected literature partiality inhabiting.
+        </p>
+      </div>
+      <div class="div border">2</div>
     </section>
 
     <main>
