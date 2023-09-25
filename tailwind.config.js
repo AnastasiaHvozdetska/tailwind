@@ -13,9 +13,11 @@ export default {
       },
       fontSize: {
         "5xl": "85px",
+        "18px": ["18px", "22px"],
         lg: ["20px", "30px"],
         lg2: ["20px", "25px"],
         lg3: ["22px", "normal"],
+        h3: ["34px", "normal"],
       },
       lineHeight: {
         "22px": "22px",
@@ -31,11 +33,16 @@ export default {
         titanWhite: "#F8F8FF",
         purpleHeart: "#7D30DF",
         lightTitanWhite: "#ECEEFF",
+        viola: "#CD7EBA",
       },
       spacing: {
         "115px": "115px",
         "190px": "190px",
         "30px": "30px",
+        "75px": "75px",
+        "60px": "60px",
+        "22px": "22px",
+        "100px": "100px",
       },
       maxWidth: {
         700: "700px",
@@ -51,6 +58,14 @@ export default {
       },
       gridTemplateColumns: {
         282: "repeat(3, 282px)",
+        475: "repeat(2, 475px)",
+      },
+      backgroundImage: {
+        "shape-pattern-right": "url('/assets/icons/shape-right.svg')",
+        "shape-pattern-left": "url('/assets/icons/shape-left.svg')",
+      },
+      borderRadius: {
+        10: "10px",
       },
       skew: {
         20: "20deg",
